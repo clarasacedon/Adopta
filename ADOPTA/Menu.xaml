@@ -1,0 +1,49 @@
+﻿<Window x:Class="ADOPTA.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADOPTA"
+        mc:Ignorable="d"
+    Title="Menu" Height="450" Width="800" 
+        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid x:Name="iniciarSesion">
+        <Grid.RowDefinitions>
+
+
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="63*"/>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="40*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <Button x:Name="btnGanimales" Content="Gestión de animales" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Grid.Column="1" Grid.Row="2" Height="168"
+                Background="Turquoise" Foreground="#FFFFFEFE" FontWeight="Bold" FontSize="18" Grid.RowSpan="2" Click="Gestiondeanimales_Click" />
+        <Button x:Name="btnGvoluntarios" Content="Gestión de voluntarios" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Grid.Column="3" Grid.Row="2" Height="168"
+                Background="Turquoise" Foreground="#FFFFFEFE" FontWeight="Bold" FontSize="18" Grid.RowSpan="2" />
+        <Button x:Name="btnGsocios" Content="Gestión de socios" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Grid.Column="5" Grid.Row="2" Height="168"
+                Background="Turquoise" Foreground="#FFFFFEFE" FontWeight="Bold" FontSize="18" Grid.RowSpan="2"/>
+
+        <Label x:Name="lblBienvenida" HorizontalAlignment="Left" Grid.Column="1" Margin="0,22,0,0" Grid.ColumnSpan="5" Width="711"
+              Foreground="Black" FontWeight="Bold" FontSize="24" FontStyle="Italic" />
+        <Label x:Name="lblConexion" Grid.ColumnSpan="3" Content="Label" HorizontalAlignment="Left" 
+               Height="28" Margin="39,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="254"/>
+
+    </Grid>
+
+
+</Window>

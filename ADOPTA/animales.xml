@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Animales>
+	<Animal Nombre="Chipas"
+			Tipo="Perro"
+			Sexo="Macho"
+			Edad="2"
+			Raza="Pequines"
+			Tamanio="Pequeño"
+			Imagen="/fotos/perro.png">
+	</Animal>
+</Animales>

@@ -1,0 +1,62 @@
+﻿<Window x:Class="ADOPTA.ventanaAyuda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADOPTA"
+        mc:Ignorable="d"
+        Title="ventanaAyuda" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="400" Margin="0,0,-8,-1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="281*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="spAyuda"
+                    Grid.Column="1" 
+                    HorizontalAlignment="Left" 
+                    Height="288" 
+                    Grid.Row="1" 
+                    Width="322" VerticalAlignment="Top" >
+
+            <Label x:Name="lblTituloAyuda" 
+                   Content=""
+                   Margin="10,10,10,10" 
+                   FontSize="20" FontWeight="Bold"
+                   Foreground="Black" 
+                   VerticalContentAlignment="Center"/>
+            <TextBox x:Name="InformacionAyuda" 
+                     Height="186" 
+                     TextWrapping="Wrap" 
+                     Text="" 
+                     Margin="25,0,25,0"/>
+            <Button x:Name="btnEnviarComentarios"
+                    Content="Enviar comentarios" 
+                    HorizontalAlignment="Left" 
+                    Height="32" Margin="187,5,0,0" Width="110" FontWeight="SemiBold" FontFamily="Segoe UI Semibold" Click="btnEnviarComentarios_Click"/>
+
+        </StackPanel>
+
+        <Button x:Name="btnAyudaUsuario" ToolTip="Ayuda usuario"
+                Background="Transparent" Grid.Row="1" Margin="3,0,5,257"  >
+            <Image Source="fotos/comts.png" Height="28" Width="26" MouseDown="Image_MouseDown_Chat" />
+        </Button>
+
+        <Button x:Name="btnContacto" ToolTip="Contacte con nosotros"
+                Background="Transparent" Margin="3,44,5,213" Grid.Row="1"  >
+            <Image Source="fotos/tlf.png" MouseDown="Image_MouseDown_Contacto" />
+        </Button>
+
+        <Button x:Name="btnInformacion" ToolTip="Información" Margin="3,88,5,173" 
+                Background="Transparent" Grid.Row="1"  >
+            <Image Source="fotos/ayuda.png" Width="21" MouseDown="Image_MouseDown_Info" RenderTransformOrigin="0.714,4.143" />
+        </Button>
+    </Grid>
+</Window>

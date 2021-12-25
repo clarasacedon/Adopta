@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOPTA", "ADOPTA\ADOPTA.csproj", "{7DC8C702-BB64-4D9D-823D-6FFAE83C78CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DC8C702-BB64-4D9D-823D-6FFAE83C78CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC8C702-BB64-4D9D-823D-6FFAE83C78CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC8C702-BB64-4D9D-823D-6FFAE83C78CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC8C702-BB64-4D9D-823D-6FFAE83C78CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A628A45E-E9F1-487E-AF79-3FDF09E0B6AE}
+	EndGlobalSection
+EndGlobal

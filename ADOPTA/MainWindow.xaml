@@ -1,0 +1,157 @@
+﻿<Window x:Class="ADOPTA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADOPTA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" 
+        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid x:Name="iniciarSesion">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="FondoVentana"
+                   Grid.Row="0" Grid.Column="0"  Grid.RowSpan="9" Grid.ColumnSpan="6"
+                   RadiusX="1" RadiusY="1" Stroke="White" >
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/fotos/Fondo6.jpg" 
+                            Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="FondoLogin" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="6" 
+                   Fill="Black" Margin="5" 
+                   Stroke="White" 
+                   RadiusX="10" RadiusY="10"/>
+
+        <Image x:Name="imgAvatar" 
+               Grid.Row="1"
+               Margin="10,16,10,4" 
+               Source="/fotos/usuario1.jpg" Grid.Column="1" MouseEnter="imgAvatar_MouseEnter" MouseLeave="imgAvatar_MouseLeave"/>
+
+        <Label x:Name="lblTituloLogin" Content="{DynamicResource lblTituloLogin}"
+               Grid.Row="1" Grid.Column="2"
+               Margin="5,16,88,0"  
+               FontSize="20" 
+               Foreground="#FFFDFBFB" 
+               VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="lblUsuario" Content="{DynamicResource lblUsuario}"
+               Grid.Row="2" Grid.Column="2" 
+               Margin="5,5,0,0" 
+               FontSize="14"
+               Foreground="#FFFBFAFA" 
+               VerticalContentAlignment="Bottom" 
+               HorizontalContentAlignment="Stretch"/>
+
+        <TextBox x:Name="txtUsuario" 
+                 Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"  
+                 Margin="5" VerticalContentAlignment="Center" TabIndex="1" KeyDown="txtUsuario_KeyDown"/>
+
+        <Label x:Name="lblContrasena" Content="{DynamicResource lblContrasena}"
+               Grid.Row="4" Grid.Column="2"  
+               FontSize="14" Foreground="#FFFBFAFA" 
+               Margin="5,0,142,5" 
+               VerticalContentAlignment="Bottom" 
+               HorizontalContentAlignment="Stretch" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="lblRecordarContrasena" Content="{DynamicResource lblRecordarContrasena}"
+               Grid.Row="4" Grid.Column="3" 
+               FontStyle="Italic" 
+               Foreground="#FFC4C6E0" 
+               HorizontalContentAlignment="Right" 
+               VerticalContentAlignment="Bottom" Margin="5,0,10,5"/>
+
+        <PasswordBox x:Name="passContrasena" 
+                Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"
+                Margin="5" PasswordChar="*" VerticalContentAlignment="Center" 
+                IsEnabled="False" TabIndex="2" KeyUp="passContrasena_KeyUp" Cursor="IBeam"/>
+
+        <Button x:Name="btnMostrarContrasena" 
+                Grid.Column="3" HorizontalAlignment="Left" Height="25" Margin="115,5,0,0" Grid.Row="5" 
+                VerticalAlignment="Top" Width="27" Cursor="Hand" Click="btnOcultarContrasena_Click">
+            <Image Source="fotos/verContrasena2.png" Stretch="Fill"/>
+        </Button>
+
+
+        <Button x:Name="btnOcultarContrasena" 
+                Grid.Column="3" HorizontalAlignment="Left" Height="25" Margin="115,5,0,0" Grid.Row="5" 
+                VerticalAlignment="Top" Width="27" Cursor="Hand" Click="btnMostrarContrasena_Click" RenderTransformOrigin="2.63,0.32">
+            <Image Source="fotos/ocultarContrasena2.png" Stretch="Fill" RenderTransformOrigin="3.522,0.81"/>
+        </Button>
+
+        <Button x:Name="btnLogin" Content="{DynamicResource btnLogin}"
+                Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"  
+                Margin="90,10,88,15"  
+                Background="Turquoise" Foreground="#FFFFFEFE" 
+                ToolTip="Pulsar para iniciar sesion"
+                FontWeight="Bold" Padding="6" 
+                UseLayoutRounding="True" 
+                AllowDrop="True" TabIndex="3" Click="btnLogin_Click">
+        </Button>
+
+
+        <Button x:Name="btnSalir" ToolTip="Abandone la aplicacion" Margin="129,10,0,35"
+                Background="Transparent" Click="btnSalir_Click" Grid.Column="5">
+            <Image Source="fotos/salir.png" Width="Auto" />
+        </Button>
+
+        <Button x:Name="btnAyuda" ToolTip="Obtenga ayuda" Margin="84,10,59,35"
+                Background="Transparent" Grid.Column="5" Click="btnAyuda_Click" >
+            <Image Source="fotos/ayuda.png" Cursor="Hand"/>
+        </Button>
+
+
+
+
+        <Image x:Name="imgCheckUsuario"
+                Grid.Row="3" Grid.Column="4"
+                HorizontalAlignment="Left" />
+
+        <Image x:Name="imgCheckContrasena"
+                Grid.Row="5" Grid.Column="4"
+                HorizontalAlignment="Left" />
+
+        <ComboBox x:Name="cbIdioma" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2"
+                HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0"
+                Width="100" Height="24"
+                FontSize ="12" SelectedIndex ="0" SelectionChanged="cbIdioma_SelectionChanged" >
+            <ComboBoxItem Name="cbiEspaniol">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="fotos/spain.png" Width="15" Height="15"/>
+                    <TextBlock VerticalAlignment="Center" Text="{DynamicResource cbiEspaniol}" Margin="5,0" />
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem Name="cbiIngles">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="fotos/uk.png" Width="15" Height="15"/>
+                    <TextBlock VerticalAlignment="Center" Text="{DynamicResource cbiIngles}" Margin="5,0" />
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="lblContrasenaVisible" Grid.Column="2" HorizontalAlignment="Left" 
+               Margin="5,5,0,0" Grid.Row="5" VerticalAlignment="Top"  Width="257" Grid.ColumnSpan="2" Height="25"
+                 IsEnabled="false"
+               />
+    </Grid>
+
+
+</Window>
